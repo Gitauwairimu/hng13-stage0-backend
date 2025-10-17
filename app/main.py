@@ -75,9 +75,9 @@ async def get_me():
         response_data = {
             "status": "success",
             "user": {
-                "user.email": USER_EMAIL,
-                "user.name": USER_NAME,
-                "user.stack": USER_STACK
+                "email": USER_EMAIL,
+                "name": USER_NAME,
+                "stack": USER_STACK
             },
             "timestamp": get_current_timestamp(),
             "fact": cat_fact
