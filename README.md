@@ -18,9 +18,9 @@ Stage: 0
 
 ### Base URL ###
 
-http://34.229.144.242:8000
+https://charles-hng13-stage0-backend.pxxl.click/me
 
-Platform: AWS
+Platform: (https://pxxl.app/)
 
 ### Technical Stack  ###
 
