@@ -1,11 +1,9 @@
-# main.py
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime, timezone
 import httpx
 import logging
-import os
-from typing import Dict, Any
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -17,10 +15,18 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
+
 # Configuration
 CAT_FACTS_API_URL = "https://catfact.ninja/fact"
 REQUEST_TIMEOUT = 5  # seconds
-
 
 USER_EMAIL = "gitauwairimu@gmail.com"  
 USER_NAME = "Charles Gitau Wairimu"
@@ -56,7 +62,6 @@ def get_current_timestamp() -> str:
     """Get current UTC time in ISO 8601 format"""
     return datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
 
-
 @app.get("/me", response_class=JSONResponse)
 async def get_me():
     """
@@ -82,11 +87,7 @@ async def get_me():
         
         return JSONResponse(
             content=response_data,
-            media_type="application/json",
-            headers={
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*"  # Basic CORS header
-            }
+            media_type="application/json"
         )
         
     except Exception as e:
@@ -95,7 +96,6 @@ async def get_me():
             status_code=500,
             detail="Internal server error"
         )
-
 
 if __name__ == "__main__":
     import uvicorn
