@@ -77,5 +77,10 @@ USER_STACK = "your stack"
 Run the Application
 ```
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+```
 
+Access the Application
+```
+http://localhost:8000/me
 
+```
