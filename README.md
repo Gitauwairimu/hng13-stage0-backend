@@ -38,15 +38,28 @@ External API: Cat Facts API (https://catfact.ninja/fact)
 ### Instructions to run locally  ###
 Ensure your local machine has Python version 3
 Install and activate a python environment
-Clone the repository - git clone git@github.com:Gitauwairimu/hng13-stage0-backend.git
-Navigate to main code directory - cd fastapi-app
-Install the dependencies - pip install -r requirements.txt
+
+Clone the repository 
+bash
+git clone git@github.com:Gitauwairimu/hng13-stage0-backend.git
+
+Navigate to main code directory - 
+bash
+cd fastapi-app
+
+Install the dependencies - 
+bash
+pip install -r requirements.txt
+
 In the main.py, change the environment variables to reflect your details
+bash
 USER_EMAIL = "your email"  
 USER_NAME = "your full name"
 USER_STACK = "your stack"
 
-Run the application using - uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+Run the application using: 
+bash
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
 
 
