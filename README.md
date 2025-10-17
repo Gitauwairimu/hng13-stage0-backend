@@ -65,6 +65,48 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
 
 
+🚀 Instructions to Run Locally
+
+Follow the steps below to set up and run the application on your local machine.
+
+✅ Prerequisites
+
+Ensure Python 3 is installed on your machine.
+
+Install and activate a virtual environment (recommended).
+
+🔧 Setup Instructions
+
+Clone the Repository
+
+git clone git@github.com:Gitauwairimu/hng13-stage0-backend.git
+
+
+Navigate to the Project Directory
+
+cd fastapi-app
+
+
+Install Dependencies
+
+pip install -r requirements.txt
+
+
+Configure Environment Variables
+
+Open main.py and update the following variables with your personal details:
+
+USER_EMAIL = "your email"
+USER_NAME = "your full name"
+USER_STACK = "your stack"
+
+
+Run the Application
+
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+
+
 
 Instructions to Run Locally
 Prerequisites
