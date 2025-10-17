@@ -19,9 +19,10 @@ Stage: 0
 ### Base URL ###
 ```
 https://charles-hng13-stage0-backend.pxxl.click/me
+```
 
 Platform: (https://pxxl.app/)
-```
+
 
 ### Technical Stack  ###
 
